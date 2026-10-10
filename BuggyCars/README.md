@@ -25,5 +25,6 @@ A continuación se detallan los defectos críticos encontrados. Cada reporte inc
 ## ⚡ Análisis de Rendimiento y Accesibilidad
 Además de las pruebas manuales, se ejecutó una auditoría automatizada utilizando Google Lighthouse para evaluar la salud general de la aplicación web.
 
-**[Ver Reporte Completo de Lighthouse (PDF)](./Lighthouse_Report_BuggyCars.pdf)**
+
+
 

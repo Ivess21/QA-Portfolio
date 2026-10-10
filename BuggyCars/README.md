@@ -20,3 +20,10 @@ A continuación se detallan los defectos críticos encontrados. Cada reporte inc
 
 ---
 *Perfil de LinkedIn:* [Ives Acosta](https://www.linkedin.com/in/ives-acosta)
+
+
+## ⚡ Análisis de Rendimiento y Accesibilidad
+Además de las pruebas manuales, se ejecutó una auditoría automatizada utilizando Google Lighthouse para evaluar la salud general de la aplicación web.
+
+[LighthouseReport.pdf](https://github.com/user-attachments/files/33281926/LighthouseReport.pdf)
+

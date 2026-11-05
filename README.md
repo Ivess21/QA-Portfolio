@@ -31,8 +31,101 @@ Estudiante de Ingeniería en Sistemas de Información (UTN FRC) y QA Tester Jr. 
   - [Reportes de bugs](link)
   - [Tablero Jira](https://ivesdev21.atlassian.net/jira/software/projects/KAN/boards/1?filter=&groupBy=none&atlOrigin=eyJpIjoiYzUxNmRlNmY0NmJhNDEzZGJjOTFkODM3YTU4YTUxZTEiLCJwIjoiaiJ9)
   
-### 2. [Próximo proyecto]
-[...]
+### 2. Secret Sauce
+# Sauce Demo | Automatización E2E con Cypress
 
-## Herramientas y conocimientos
-[Solo lo que podés defender en una entrevista.]
+![Estado](https://img.shields.io/badge/estado-en%20pausa-yellow)
+![Cypress](https://img.shields.io/badge/Cypress-16.x-17202C)
+
+Suite de pruebas end-to-end automatizadas con Cypress sobre [Sauce Demo](https://www.saucedemo.com), un e-commerce de demostración creado por Sauce Labs para practicar testing. El objetivo es validar los flujos principales de forma repetible y detectar regresiones.
+
+## ⏸️ Estado del proyecto: en pausa
+
+- **Última actualización:** 05-11-2026
+- **Motivo de la pausa:** [ej. priorizar otro proyecto de práctica]
+- **Cómo retomarlo:** ver la sección [Próximos pasos](#próximos-pasos)
+
+## Alcance
+
+
+| Módulo | Estado | Notas |
+|--------|--------|-------|
+| Login (usuarios válidos e inválidos) | [x] / [ ] | [ej. data-driven con fixture] |
+| Inventario (listado, ordenamiento) | [x] / [ ] | |
+| Carrito (agregar y quitar productos) | [x] / [ ] | |
+| Checkout (flujo completo y validaciones) | [x] / [ ] | |
+| Logout | [x] / [ ] | |
+| Usuarios especiales (`problem_user`, `performance_glitch_user`) | [ ] | Pendiente |
+
+**Fuera de alcance:** performance bajo carga, seguridad, accesibilidad y diseño responsive.
+
+## Stack
+
+- Cypress versión: 16.2.0
+- Node.js versión: v24.22.1
+- JavaScript
+- Entorno de desarrollo: Debian GNU/Linux 13, Chrome
+
+## Estructura
+
+```
+cypress/
+├── e2e/
+│   └── [nombre-del-archivo].cy.js    ← tests agrupados por módulo
+├── fixtures/
+│   └── usuarios.json                 ← datos de prueba (data-driven)
+└── support/
+cypress.config.js
+package.json
+```
+
+## Cómo ejecutarlo
+
+Requisitos: Node.js 20.x, 22.x o 24.x o superior y las dependencias de sistema de Cypress para Linux.
+
+```bash
+git clone [URL-del-repo]
+cd [nombre-de-la-carpeta]
+npm install
+npx cypress install      # descarga el binario si npm lo bloqueó
+npx cypress open         # modo interactivo
+npx cypress run          # modo headless
+```
+
+### Usuarios de prueba
+
+Son los que el propio sitio publica en su pantalla de login. No son datos reales.
+
+| Usuario | Comportamiento esperado |
+|---------|-------------------------|
+| `standard_user` | Acceso normal |
+| `locked_out_user` | Acceso bloqueado |
+| `problem_user` | Presenta defectos visuales y funcionales |
+| `performance_glitch_user` | Respuestas lentas |
+
+## Resultados de la última ejecución
+
+- **Fecha:** 05-11-2026
+- **Navegador:** 157.0.8103.38
+- **Evidencia:** [captura o video de la ejecución](link)
+
+## Problemas conocidos
+
+- Al instalar Cypress con npm, el script de descarga del binario puede quedar bloqueado. Se resuelve con `npx cypress install`.
+
+## Próximos pasos
+
+1. Cubrir `problem_user` y `performance_glitch_user`.
+2. Validar subtotal, impuestos y total en el resumen del checkout.
+3. [Refactorizar con comandos personalizados o Page Object Model.]
+4. [Integrar la ejecución en GitHub Actions.]
+
+## Qué aprendí
+
+
+## Autor
+
+**Ives Agustín Acosta** · Estudiante de Ingeniería en Sistemas (UTN FRC) · QA Tester Jr. en formación
+🔗 [LinkedIn]([tu-url]) · 📂 [Portfolio QA](https://github.com/Ivess21/QA-Portfolio)
+
+
